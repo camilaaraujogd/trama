@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAMA - MODA SUSTENTÁVEL</title>
+  <link rel="stylesheet" href="novidadesstyle.css">
+  <link rel="icon" href="trama_logo_small.svg">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="trama_logo.png"></a>
+  </div>
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul>
+    <li><a class="navlink" href="sobre.html">SOBRE</a></li>
+    <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
+    <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
+  </ul>
+
+  <a href="visualizar_produtos.php">
+    <button class="login-btn">PRODUTOS POSTADOS</button>
+  </a>
+
+  <a href="principais_vendas.php">
+    <button class="login-btn">DARSHBOARD VENDAS</button>
+  </a>
+
+  <a href="perfil_empresa.php">
+    <button class="login-btn">PERFIL</button>
+  </a>
+
+  </header>
+
+  <br>
+  <br>
+  <br>
+
+<body>
+    <br>
+    <h2>Formulário de Inserção de Produtos</h2>
+    <form action="inserir_produto.php" method="POST" enctype="multipart/form-data">
+        <label for="nome">Nome do Produto:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+        
+        <label for="marca">Marca:</label><br>
+        <input type="text" id="marca" name="marca"><br><br>
+        
+        <label for="preco">Preço:</label><br>
+        <input type="text" id="preco" name="preco"><br><br>
+        
+        <label for="descricao">Descrição:</label><br>
+        <input type="text" id="descricao" name="descricao"><br><br>
+
+        <label for="imagem">Imagem:</label><br>
+        <input type="file" id="imagem" name="imagem"><br><br>
+        
+        <input type="submit" value="Inserir Produto">
+    </form>
+
+    <footer class="text-center footer text-center">
+
+        <div class="footerbox">
+      
+            <div class="footerblock">
+              
+              <div class="nomeempresa ">
+                <h4>TRAMA</h4>
+                <p><br>RUA DA GLÓRIA, 372, SALA 505 CURITIBA, PARANÁ<br><b>(41) 99139-9175</b></p>
+              </div>
+      
+              <div class="copyright"> <p>Copyright © 2023. Criado por Camila Araújo, Guilherme Belo & Yasmin Carmona.</p> </div>
+        </div>
+      
+      </footer>
+      <script src="menuscript.js"></script>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      
+    
+</body>
+</html>
