@@ -10,12 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Se for cliente
     if ($tipo == "cliente") {
          // coleta os dados do formulário
-        $nome = $_POST['nome'];
-        $sobrenome = $_POST['sobrenome'];
-        $email = $_POST['email'];    
-        $cpf = $_POST['cpf'];
-        $tel = $_POST['tel'];
-        $senha = $_POST['senha']; // Senha sem criptografia
+        $nome       = $_POST['nome'];
+        $sobrenome  = $_POST['sobrenome'];
+        $email      = $_POST['email'];    
+        $cpf        = $_POST['cpf'];
+        $tel        = $_POST['tel'];
+        $senha      = $_POST['senha']; // Senha sem criptografia
         
         // Criptografa a senha
         $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO clientes (nome, sobrenome, email, tel, cpf, senha) VALUES ('$nome', '$sobrenome', '$email', '$tel', '$cpf', '$senhaCriptografada')";
 
         if ($conexao->query($sql) === TRUE) {
-            header("Location: login.html");
+            header("Location: ../login.html");
         } else {
             echo "Erro: " . $conexao->error;
         }

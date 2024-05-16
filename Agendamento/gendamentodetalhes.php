@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de configuração do banco de dados
-include_once('config.php');
+include_once('../config.php');
 
 // Verifica se foi fornecido um ID na URL
 if(isset($_GET['id'])) {

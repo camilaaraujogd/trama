@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: login/login.php");
     exit();
 }
 ?>
@@ -13,21 +13,21 @@ if (!isset($_SESSION['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
     <link rel="stylesheet" href="perfilstyle.css">
-    <link rel="icon" href="trama_logo_small.svg">
+    <link rel="icon" href="imagens/trama_logo_small.svg">
 </head>
 <body>
 <header>
     <div class="logo">
-        <a href="index.html"><img src="trama_logo.png"></a>
+        <a href="index.html"><img src="imagens/trama_logo.png"></a>
     </div>
 
     <ul>
         <li><a class="navlink" href="sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
+        <li><a class="navlink" href="../produtos/produtos.html">PRODUTOS</a></li>
         <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
 
-    <a href="login.html">
+    <a href="login/login.html">
         <button class="login-btn">LOGIN</button>
     </a>
 </header>
@@ -44,7 +44,7 @@ if (!isset($_SESSION['id'])) {
         <div class="deletebotao">
             <form action="empresaexcluir.php" method="post">
                 <input type="submit" name="confirmar" value="CONFIRMAR">
-                <a href="perfil_empresa.php"><button class="cancelar">CANCELAR</a>
+                <a href="empresa/perfil_empresa.php"><button class="cancelar">CANCELAR</a>
             </form>
         </div>
     </div>

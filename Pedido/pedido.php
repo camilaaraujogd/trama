@@ -11,13 +11,13 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRAMA - MODA SUSTENTÁVEL</title>
   <link rel="stylesheet" href="novidadesstyle.css">
-  <link rel="icon" href="trama_logo_small.svg">
+  <link rel="icon" href="imagens/trama_logo_small.svg">
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <a href="index.html"><img src="trama_logo.png"></a>
+      <a href="index.html"><img src="imagens/trama_logo.png"></a>
   </div>
   <div class="hamburger-menu">
     <div class="bar"></div>
@@ -26,11 +26,11 @@ session_start();
   </div>
   <ul>
     <li><a class="navlink" href="sobre.html">SOBRE</a></li>
-    <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
+    <li><a class="navlink" href="produtos/produtos.html">PRODUTOS</a></li>
     <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
   </ul>
 
-  <a href="login.html">
+  <a href="login/login.html">
     <button class="login-btn">LOGIN</button>
   </a>
 
@@ -156,7 +156,7 @@ if(isset($_SESSION["carrinho"]) && count($_SESSION["carrinho"]) > 0) {
         <input type="radio" id="boleto" name="pagamento" value="boleto">
         <label for="boleto">Boleto Bancário</label><br>
 
-        <a href="produtoslogado.html"><button class="logout">VOLTAR</button></a>
+        <a href="produtos/produtoslogado.html"><button class="logout">VOLTAR</button></a>
         <input type="submit" value="Finalizar Compra">
     </form>
 </div>

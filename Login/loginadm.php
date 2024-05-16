@@ -1,6 +1,6 @@
 <?php
 // Inclua o arquivo de configuração do banco de dados
-include("config.php");
+include("../config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -14,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Se o administrador existir, redirecione para a página de agendamento
         $row = $result->fetch_assoc();
         $admin_id = $row['id'];
-        header("Location: agendamentoadmin.php?id=$admin_id");
+        header("Location: ../agendamento/agendamentoadmin.php?id=$admin_id");
         exit();
     } else {
         // Se as credenciais estiverem incorretas, redirecione de volta para a página de login
-        header("Location: loginadm.html");
+        header("Location: ../login/loginadm.html");
         exit();
     }
 }

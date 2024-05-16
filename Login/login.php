@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-include 'config.php';
+include '../config.php';
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 session_start();
                 $_SESSION['id'] = $row['id'];
-                header("Location: feed.php");
+                header("Location: ../feed.php");
                 exit(); // Importante para evitar a execução adicional do código
 
             } else {
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Inicia a sessão e redireciona para o perfil da empresa
                 session_start();
                 $_SESSION['id'] = $row['id'];
-                header("Location: colocarprodutos.html");
+                header("Location: ../produtos/colocarprodutos.html");
                 exit(); // Importante para evitar a execução adicional do código
             } else {
                 echo "CNPJ ou senha incorretos.";

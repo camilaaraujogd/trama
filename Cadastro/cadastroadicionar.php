@@ -1,7 +1,7 @@
 
 <?php
 // Incluir arquivo de configuração
-include("config.php");
+include("../config.php");
 
 $sql = "SELECT * FROM clientes WHERE id = 1"; // Supondo que o usuário que você deseja editar tenha ID 1
 
