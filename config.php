@@ -1,6 +1,6 @@
 <?php 
 // aqui conseguimos criar uma conexão com nosso banco de dados
-    $dbHost = 'Localhost';
+    $dbHost = 'localhost:3307';
     $dbUsername ='root';
     $dbPassword='';
     $dbname = 'trama';
@@ -11,4 +11,7 @@
         die("Falha na conexão: " . $conexao->connect_error);
     }
 
+    if(!isset($_SESSION['id'])){
+        header("Location: /trama");
+    }
 ?>
