@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-include 'config.php';
+include ('config.php');
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
