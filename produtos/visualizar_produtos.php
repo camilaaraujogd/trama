@@ -1,5 +1,5 @@
 <?php
-include_once('config.php');
+include_once('../config.php');
 
 // Verifica se foi solicitada a exclusão de algum produto
 if(isset($_GET['delete_id'])) {

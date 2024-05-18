@@ -1,14 +1,8 @@
 <?php
 session_start();
 
-// Verifica se o usuário está logado
-if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
-    exit();
-}
-
 // Conexão com o banco de dados
-include 'config.php';
+include ('../config.php');
 
 // Obtém informações da empresa
 $id = $_SESSION['id'];
@@ -58,7 +52,7 @@ $saudacao = "Bem-vindo, " . $row['NomeFanta'];
             <h5>SEU PERFIL</h5>
         </div>
         <div class="information">
-            <h1><p>Bem-vindo, <?php echo $row['nome']; ?>!</p> </h1>    
+            <h1><p>Bem-vindo, <?php echo $row['RazaoSoci']; ?>!</p> </h1>    
             <h3><b>INFORMAÇÕES DA EMPRESA</b></h3>
             <p><b>RAZÃO SOCIAL:</b> <?php echo $row['RazaoSoci']; ?></p>
             <p><b>NOME FANTASIA:</b> <?php echo $row['NomeFanta']; ?></p>
