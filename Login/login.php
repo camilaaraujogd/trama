@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-include '../config.php';
+include ('../config.php');
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result->num_rows == 1) {
                 $row = $result->fetch_assoc();
                 // Inicia a sessão e redireciona para o perfil do cliente
-
                 session_start();
                 $_SESSION['id'] = $row['id'];
                 header("Location: ../feed.php");
