@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO empresas (cnpj, RazaoSoci, NomeFanta, tel, email, senha) VALUES ('$cnpj', '$RazaoSoci', '$NomeFanta', '$tel', '$email', '$senhaCriptografada')";
 
         if ($conexao->query($sql) === TRUE) {
-            header("Location: login.html");
+            header("Location: ../Login/login.html");
         } else {
             echo "Erro: " . $conexao->error;
         

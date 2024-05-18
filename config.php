@@ -12,7 +12,7 @@
     }
 
 
-    if(!isset($_SESSION['id'])){
-        header("Location: /trama");
-    }
+    //if(!isset($_SESSION['id'])){
+        //header("Location: /trama");
+    //}
 ?>
