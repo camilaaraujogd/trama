@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imagem = $_FILES['imagem']['name']; // Nome do arquivo de imagem
 
     // Move a imagem para a pasta desejada 
-    $target_dir = "../Uploads/";
+    $target_dir = "Uploads/";
     $target_file = $target_dir . basename($_FILES["imagem"]["name"]);
     move_uploaded_file($_FILES["imagem"]["tmp_name"], $target_file);
 
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if ($conexao->query($sql) === TRUE) {
-        header("Location: colocarprodutos.html");
+        header("Location: ../produtos/colocarprodutos.html");
         exit; // Certifique-se de sair do script após o redirecionamento
     } else {
         echo "Erro ao inserir o produto: " . $conexao->error;
