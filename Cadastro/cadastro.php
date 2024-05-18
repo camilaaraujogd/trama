@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-include ("config.php");
+include ("../config.php");
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     // Se for empresa
-    elseif ($tipo == "empresa") {
+    else if ($tipo == "empresa") {
         // Recebe os dados do formulário
         $cnpj = $_POST['cnpj'];
         $RazaoSoci = $_POST['RazaoSoci'];
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Erro: " . $conexao->error;
         
-        } //225.458.761-52
+        } 
     }
 }
 ?>
