@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO clientes (nome, sobrenome, email, tel, cpf, senha) VALUES ('$nome', '$sobrenome', '$email', '$tel', '$cpf', '$senhaCriptografada')";
 
         if ($conexao->query($sql) === TRUE) {
-            header("Location: ../login.html");
+            header("Location: login.html");
         } else {
             echo "Erro: " . $conexao->error;
         }
