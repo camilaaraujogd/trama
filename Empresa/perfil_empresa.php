@@ -26,13 +26,13 @@ $saudacao = "Bem-vindo, " . $row['NomeFanta'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="perfilstyle.css">
-    <link rel="icon" href="trama_logo_small.svg">
+    <link rel="stylesheet" href="../perfilstyle.css">
+    <link rel="icon" href="../imagens/trama_logo_small.svg">
 </head>
 <body>
 <header>
     <div class="logo">
-        <a href="index.html"><img src="trama_logo.png"></a>
+        <a href="../index.html"><img src="../Imagens/trama_logo.png"></a>
     </div>
     <div class="hamburger-menu">
         <div class="bar"></div>
