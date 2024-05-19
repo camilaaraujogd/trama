@@ -29,7 +29,7 @@ function createFooter() {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         width: 100%;
         text-align: center;
-        background-image: url("../trama/Imagens/background2.png");
+        background-image: url("/trama/Imagens/background2.png");
       }
       .footerblock {
         margin: 0;
