@@ -7,8 +7,8 @@ include("../config.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRAMA - MODA SUSTENTÁVEL</title>
-  <link rel="stylesheet" href="novidadesstyle.css">
-  <link rel="icon" href="/imagens/trama_logo_small.svg">
+  <link rel="stylesheet" href="../SemLogin/novidadesstyle.css">
+  <link rel="icon" href="../imagens/trama_logo_small.svg">
   <script src="./javascript/headerCliente.js" defer></script>
   <script src="./javascript/Footer.js" defer></script>
   <script src="./javascript/menuscript.js" defer></script>
