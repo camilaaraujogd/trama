@@ -1,29 +1,23 @@
 function createHeader() {
   const headerHTML = `
     <header>
-      <div class="logo">
-        <a href="../index.html"><img src="./Imagens/trama_logo.png" alt="Logo"></a>
-      </div>
-      <div class="hamburger-menu">
+    <div class="logo">
+        <a href="index.html"><img src="../trama/Imagens/trama_logo.png"></a>
+    </div>
+    <div class="hamburger-menu">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <ul>
-        <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
+    <ul>
+        <li><a class="navlink" href="sobre.html">SOBRE</a></li>
         <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
-      </ul>
-      <a href="visualizar_produtos.php">
-        <button class="login-btn">SEUS PRODUTOS</button>
-      </a>
-      <a href="../principais_vendas.php">
-        <button class="login-btn">DASHBOARD</button>
-      </a>
-      <a href="../empresa/perfil_empresa.php">
-        <button class="login-btn">PERFIL</button>
-      </a>
-    </header>
+        <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
+    </ul>
+
+    <a href="login.html">
+        <button class="login-btn">LOGIN</button>
+    </a>
   `;
 
   document.body.insertAdjacentHTML('afterbegin', headerHTML);

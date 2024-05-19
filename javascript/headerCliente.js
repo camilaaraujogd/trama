@@ -1,5 +1,5 @@
-function createHeaderp() {
-    const headerpHTML = `
+function createHeaderC() {
+    const headerCHTML = `
     <header>
     <div class="logo">
       <a href="../index.html"><img src="../trama/Imagens/trama_logo.png"></a>
@@ -10,27 +10,24 @@ function createHeaderp() {
         <div class="bar"></div>
     </div>
     <ul>
-        <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
-    </ul>
+    <li><a class="navlink" href="sobre.html">SOBRE</a></li>
+    <li><a class="navlink" href="produtos/produtos.html">PRODUTOS</a></li>
+    <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
+  </ul>
 
-    <a href="visualizar_produtos.php">
-        <button class="login-btn">SEUS PRODUTOS</button>
-    </a>
+  <a href="carrinho/carrinho.php">
+    <button class="login-btn">CARRINHO</button>
+  </a>
 
-    <a href="../principais_vendas.php">
-        <button class="login-btn">DASHBOARD</button>
-    </a>
 
-    <a href="../empresa/perfil_empresa.php">
-        <button class="login-btn">PERFIL</button>
-    </a>
+  <a href="cliente/perfil_cliente.php">
+    <button class="login-btn">PERFIL</button>
+  </a>
 
-    </header>
+  </header>
     `;
   
-    document.body.insertAdjacentHTML('afterbegin', headerpHTML);
+    document.body.insertAdjacentHTML('afterbegin', headerCHTML);
   
     const style = document.createElement('style');
     style.textContent = `
@@ -126,6 +123,6 @@ li {
     document.head.appendChild(style);
   }
   
-  document.addEventListener('DOMContentLoaded', createHeaderp);
+  document.addEventListener('DOMContentLoaded', createHeaderC);
   
 

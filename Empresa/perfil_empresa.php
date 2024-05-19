@@ -28,23 +28,10 @@ $saudacao = "Bem-vindo, " . $row['NomeFanta'];
     <title>TRAMA - MODA SUSTENTÁVEL</title>
     <link rel="stylesheet" href="../perfilstyle.css">
     <link rel="icon" href="../imagens/trama_logo_small.svg">
+    <script src="./javascript/Header.js" defer></script>
+    <script src="./javascript/menuscript.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <a href="../index.html"><img src="../Imagens/trama_logo.png"></a>
-    </div>
-    <div class="hamburger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <ul>
-        <li><a class="navlink" href="sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
-    </ul>
-</header>
 
 <div class="containerbg">
     <div class="container">

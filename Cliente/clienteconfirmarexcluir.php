@@ -15,7 +15,8 @@ if (!isset($_SESSION['id'])) {
     <title>TRAMA - MODA SUSTENTÁVEL</title>
     <link rel="stylesheet" href="perfilstyle.css">
     <link rel="icon" href="trama_logo_small.svg">
-    <script src="..\Header\createHeader.js" defer></script>
+    <script src="./javascript/Header.js" defer></script>
+    <script src="./javascript/menuscript.js" defer></script>
 </head>
 <body>
 

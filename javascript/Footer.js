@@ -1,4 +1,6 @@
 function createFooter() {
+    console.log("createFooter function called"); // Log inicial
+
     const footerHTML = `
       <footer class="text-center footer">
         <div class="footerbox">
@@ -14,9 +16,12 @@ function createFooter() {
         </div>
       </footer>
     `;
-  
+
+    console.log("Footer HTML created");
+
     document.body.insertAdjacentHTML('beforeend', footerHTML);
-  
+    console.log("Footer HTML inserted into the document");
+
     const style = document.createElement('style');
     style.textContent = `
       .footer {
@@ -24,7 +29,7 @@ function createFooter() {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         width: 100%;
         text-align: center;
-        background-image: url("../trama/imagens/background2.png");
+        background-image: url("../trama/Imagens/background2.png");
       }
       .footerblock {
         margin: 0;
@@ -46,7 +51,8 @@ function createFooter() {
       }
     `;
     document.head.appendChild(style);
-  }
-  
-  document.addEventListener('DOMContentLoaded', createFooter);
-  
+    console.log("Footer styles appended to the document head");
+}
+
+document.addEventListener('DOMContentLoaded', createFooter);
+console.log("DOMContentLoaded event listener added for footer");
