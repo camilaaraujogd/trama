@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de configuração do banco de dados
-include_once('config.php');
+include_once('../config.php');
 
 // Inicializa a variável de mensagem
 $message = "";
@@ -40,21 +40,10 @@ $conexao->close();
     <title>TRAMA - MODA SUSTENTÁVEL</title>
     <link rel="stylesheet" href="../agendamento/agendamentoadminstyle.css">
     <link rel="icon" href="../imagens/trama_logo_small.svg">
+    <script src="../javascript/Header.js" defer></script>
+    <script src="../javascript/menuscript.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <a href="../index.html"><img src="../imagens/trama_logo.png"></a>
-    </div>
-    <ul>
-        <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="../produtos/produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
-    </ul>
-    <a href="login.html">
-        <button class="login-btn">LOGIN</button>
-    </a>
-</header>
 
 <div class="containerbg">
     <div class="container">
@@ -98,8 +87,8 @@ $conexao->close();
                 echo "<p><strong>Comentário:</strong> $comentario</p>";
                 echo "<label for='comentario_$id'>Comentário:</label>";
                 echo "<textarea id='comentario_$id' name='comentario'></textarea>";
-                echo "<input type='submit' value='Atualizar'>";
-                echo "</form>";
+                echo "<br><input type='submit' class='adicionar' value='ATUALIZAR'>";
+                echo "</form><br>";
 
 
 

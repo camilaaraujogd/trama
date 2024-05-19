@@ -90,7 +90,8 @@ function createHeader() {
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
-      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
       cursor: pointer;
       border-radius: 20px;
       transition: background-color 0.3s ease;

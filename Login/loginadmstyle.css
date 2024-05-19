@@ -70,27 +70,6 @@ li {
     width: 0;
 }
 
-.login-btn {
-	float: right;
-    background-color: #759358;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    margin-right: 80px; /* Adiciona margem à esquerda */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-btn:hover {
-    background-color:  #000;
-    color: #eaefea;
-}
-
 /**   INÍCIO DO LOGIN **/
 
 .loginbg{
@@ -225,6 +204,7 @@ input[type="submit"]:hover {
     color: #759358;
     align-items: center;
 }
+
 
 @media (max-width: 600px) {
     .entrar {

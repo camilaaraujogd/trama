@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Inicia a sessão e redireciona para o perfil do cliente
                 session_start();
                 $_SESSION['id'] = $row['id'];
-                header("Location: ../feed.php");
+                header("Location: ../Cliente/feed.php");
                 exit(); // Importante para evitar a execução adicional do código
 
             } else {

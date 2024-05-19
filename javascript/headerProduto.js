@@ -2,7 +2,7 @@ function createHeaderp() {
     const headerpHTML = `
     <header>
     <div class="logo">
-      <a href="../index.html"><img src="../trama/Imagens/trama_logo.png"></a>
+      <a href="../index.html"><img src="/trama/Imagens/trama_logo.png"></a>
     </div>
     <div class="hamburger-menu">
         <div class="bar"></div>
@@ -20,11 +20,11 @@ function createHeaderp() {
     </a>
 
     <a href="../principais_vendas.php">
-        <button class="login-btn">DASHBOARD</button>
+        <button class="dash-btn">DASHBOARD</button>
     </a>
 
     <a href="../empresa/perfil_empresa.php">
-        <button class="login-btn">PERFIL</button>
+        <button class="dash-btn">PERFIL</button>
     </a>
 
     </header>
@@ -102,15 +102,39 @@ li {
     width: 0;
 }
 
-.login-btn {
+
+.dash-btn {
 	float: right;
     background-color: #759358;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     border: none;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 80px; /* Adiciona margem à esquerda */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dash-btn:hover {
+    background-color: #000;
+    color: #eaefea;
+}
+
+.login-btn {
+	float: right;
+    background-color: #759358;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 20px;
     transition: background-color 0.3s ease;
