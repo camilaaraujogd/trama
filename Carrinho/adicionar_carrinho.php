@@ -1,5 +1,5 @@
 <?php
-include_once('config.php');
+include_once('../config.php');
 
 session_start();
 
@@ -24,17 +24,33 @@ if(isset($_POST["produto_id"]) && !empty($_POST["produto_id"])) {
         move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminho_arquivo);
     }
 
-    // Insere o produto no carrinho, incluindo o caminho da imagem, se disponível
-    $sql = "INSERT INTO carrinho (produto_id, quantidade, produto_imagem) VALUES ('$produto_id', 1, '$caminho_arquivo')";
-    if ($conexao->query($sql) === TRUE) {
-        header("Location: feed.php");
-        exit();
+    // Verifica se o produto já está no carrinho no banco de dados
+    $sql_select = "SELECT * FROM carrinho WHERE produto_id = '$produto_id'";
+    $result_select = $conexao->query($sql_select);
+
+    if ($result_select->num_rows > 0) {
+        // Se o produto já estiver no carrinho, apenas atualiza a quantidade
+        $sql_update = "UPDATE carrinho SET quantidade = quantidade + 1 WHERE produto_id = '$produto_id'";
+        if ($conexao->query($sql_update) === TRUE) {
+            header("Location: ../feed.php");
+            exit();
+        } else {
+            header("Location: ../feed.php?error=db_error");
+            exit();
+        }
     } else {
-        header("Location: feed.php?error=db_error");
-        exit();
+        // Se o produto não estiver no carrinho, insere o produto no carrinho
+        $sql_insert = "INSERT INTO carrinho (produto_id, quantidade, produto_imagem) VALUES ('$produto_id', 1, '$caminho_arquivo')";
+        if ($conexao->query($sql_insert) === TRUE) {
+            header("Location: ../feed.php");
+            exit();
+        } else {
+            header("Location: ../feed.php?error=db_error");
+            exit();
+        }
     }
 } else {
-    header("Location: feed.php");
+    header("Location: ../feed.php");
     exit();
 }
 ?>

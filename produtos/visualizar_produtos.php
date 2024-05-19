@@ -26,7 +26,7 @@ if ($resultado->num_rows > 0) {
         echo "<h2>Marca: " . $row['marca'] . "</h2>";
         echo "<h4>Descrição: " . $row['descricao'] . "</h4>";
         echo "<p>Preço: R$" . number_format($row['preco'], 2, ',', '.') . "</p>";
-        echo "<img src='../Uploads/" . $row['imagem'] . "' width='200'><br>";
+        echo "<img src='../uploads/" . $row['imagem'] . "' width='200'><br>";
         echo "<a href='?delete_id=" . $row['id'] . "'>Excluir</a><br><br>"; 
     }
 } else {

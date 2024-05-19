@@ -1,5 +1,5 @@
 <?php
-  include("../config.php");
+include("../config.php");
 ?>
 <!DOCTYPE html>
 <html lang="PT-br">
@@ -19,7 +19,7 @@
   <p>PRODUTOS</p>
   <div class="destaques">
 
-    <?php include_once("produtos\produtoslogado.php"); ?>
+  <?php include_once("../produtos/produtoslogado.php"); ?>
     
   </div>
 </div>

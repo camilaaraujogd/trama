@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-include_once('config.php');
+include_once('../config.php');
 
 // Consulta para selecionar todos os produtos do banco de dados
 $sql = "SELECT * FROM produtos";
@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo '<div class="destaques">';
         echo '<div class="produtinho">';
-        echo '<img src="imagens/' . $row['imagem'] . '" alt="">';
+        echo '<img src="../uploads/' . $row['imagem'] . '" alt="">';
         echo '<h2>' . $row['nome'] . '</h2>';
         echo '<p>' . $row['marca'] . '</p>';
         echo '<p>' . $row['descricao'] . '</p>';
