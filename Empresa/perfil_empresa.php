@@ -16,7 +16,7 @@ $cnpj_formatado = preg_replace('/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/', '$1.$2.$
 $telefone_formatado = preg_replace('/(\d{2})(\d{4,5})(\d{4})/', '($1) $2-$3', $row['tel']);
 
 // Saudação personalizada
-$saudacao = "Bem-vindo, " . $row['NomeFanta'];
+$saudacao = "Bem-vindo, " . $row['NomeFantasia'];
 
 ?>
 
