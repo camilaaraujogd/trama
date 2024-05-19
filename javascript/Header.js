@@ -18,6 +18,7 @@ function createHeader() {
     <a href="/trama/Login/login.html">
         <button class="login-btn">LOGIN</button>
     </a>
+    </header>
   `;
 
   document.body.insertAdjacentHTML('afterbegin', headerHTML);
@@ -98,6 +99,7 @@ function createHeader() {
       margin-right: 80px; /* Adiciona margem à esquerda */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .login-btn:hover {
       background-color: #000;
       color: #eaefea;

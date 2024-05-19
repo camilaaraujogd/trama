@@ -2,17 +2,17 @@ function createHeaderp() {
     const headerpHTML = `
     <header>
     <div class="logo">
-      <a href="../index.html"><img src="/trama/Imagens/trama_logo.png"></a>
+        <a href="index.html"><img src="/trama/Imagens/trama_logo.png"></a>
     </div>
     <div class="hamburger-menu">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-    </div>
+      </div>
     <ul>
-        <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
+        <li><a class="navlink" href="../SemLogin/index.html">SOBRE</a></li>
+        <li><a class="navlink" href="../SemLogin/Marcas.html">NOSSAS MARCAS</a></li>
+        <li><a class="navlink" href="../SemLogin/sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
 
     <a href="visualizar_produtos.php">
