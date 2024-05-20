@@ -3,11 +3,11 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: ../login/login.html");
     exit();
 }
 
-include 'config.php';
+include("../config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirmar'])) {
     // Exclui a conta do cliente do banco de dados
@@ -20,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirmar'])) {
     // Limpa a sessão e redireciona para a página de login
     session_unset();
     session_destroy();
-    header("Location: login.html");
+    header("Location: ../login/login.html");
     exit();
 } else {
-    header("Location: perfil_cliente.php");
+    header("Location: ../Cliente/perfil_cliente.php");
     exit();
 }
 ?>

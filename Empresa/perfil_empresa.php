@@ -26,10 +26,11 @@ $saudacao = "Bem-vindo, " . $row['NomeFanta'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="../perfilstyle.css">
-    <link rel="icon" href="../imagens/trama_logo_small.svg">
-    <script src="./javascript/Header.js" defer></script>
-    <script src="./javascript/menuscript.js" defer></script>
+  <link rel="stylesheet" href="..\Agendamento\agendamentoadminstyle.css">
+  <link rel="icon" href=".\imagens\trama_logo_small.svg">
+  <script src="..\javascript\headerProduto.js" defer></script>
+  <script src="..\javascript\Footer.js" defer></script>
+  <script src="..\javascript\menuscript.js" defer></script>
 </head>
 <body>
 
@@ -51,10 +52,10 @@ $saudacao = "Bem-vindo, " . $row['NomeFanta'];
         </div>
         <!-- Botões de logout -->
         <div class="inline-buttons">
-            <a href="empresaeditar.php"><button class="editar">EDITAR</button></a>
-            <a href="agendamentoindex.php"><button class="editar">AGENDAR VISITA</button></a>
-            <a href="agendamentodetalhes.php?id=''"><button class="editar">DETALHES DO AGENDAMENTO</button></a>
-            <a href="index.html"><button class="logout">LOGOUT</button></a>
+            <a href="../Empresa/empresaeditar.php"><button class="editar">EDITAR</button></a>
+            <a href="../Agendamento/agendamentoindex.php"><button class="editar">AGENDAR VISITA</button></a>
+            <a href="../Agendamento/agendamentodetalhes.php?id=''"><button class="editar">DETALHES DO AGENDAMENTO</button></a>
+            <a href="../SemLogin/index.html"><button class="logout">LOGOUT</button></a>
         </div>
     </div>
 </div>

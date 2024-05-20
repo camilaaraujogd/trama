@@ -2,11 +2,11 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: ../login/login.html");
     exit();
 }
 
-include 'config.php';
+include("../config.php");
 
 // Obtém informações do cliente
 $id = $_SESSION['id'];
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     // Redireciona de volta para o perfil do cliente
-    header("Location: perfil_cliente.php");
+    header("Location: ../Cliente/perfil_cliente.php");
     exit();
 }
 ?>
@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="cadastrostyleeditar.css">
-    <link rel="icon" href="trama_logo_small.svg">
-    <script src="./javascript/Header.js" defer></script>
-    <script src="./javascript/menuscript.js" defer></script>
+    <link rel="stylesheet" href="../Cadastro/cadastrostyleeditar.css">
+    <link rel="icon" href="../Imagens/trama_logo_small.svg">
+    <script src="../javascript/Header.js" defer></script>
+    <script src="../javascript/menuscript.js" defer></script>
 </head>
 <body>
 
@@ -101,10 +101,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="btn-box">
             <div class="inline-buttons">
                 <input type="submit" value="Atualizar">
-                <button class="excluir" onclick="window.location.href='clienteconfirmarexcluir.php'">EXCLUIR</button>
+                <button class="excluir" onclick="window.location.href='../Cliente/clienteconfirmarexcluir.php'">EXCLUIR</button>
             </div>
             <div class="center">
-        <button class="voltar"><a href="perfil_cliente.php">Voltar</a></button>
+        <button class="voltar"><a href="../Cliente/perfil_cliente.php">Voltar</a></button>
     </div>
             </div>
     </form>

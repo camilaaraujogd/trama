@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
 }
 
 // Conexão com o banco de dados
-include 'config.php';
+include("../config.php");
 
 // Obtém informações do cliente
 $id = $_SESSION['id'];
@@ -28,7 +28,7 @@ $telefone_formatado = preg_replace('/(\d{2})(\d{4,5})(\d{4})/', '($1) $2-$3', $r
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="perfilstyle.css">
+    <link rel="stylesheet" href="../SemLogin/perfilstyle.css">
     <link rel="icon" href="trama_logo_small.svg">
     <script src="./javascript/Header.js" defer></script>
     <script src="./javascript/menuscript.js" defer></script>
@@ -52,9 +52,9 @@ $telefone_formatado = preg_replace('/(\d{2})(\d{4,5})(\d{4})/', '($1) $2-$3', $r
         </div>
         <!-- Botões de logout -->
         <div class="inline-buttons">
-            <a href="clienteeditar.php"><button class="editar">EDITAR</button></a>
-            <a href="index.html"><button class="logout">LOGOUT</button></a>
-            <a href="produtoslogado.html"><button class="logout">VOLTAR</button></a>
+            <a href="../Cliente/clienteeditar.php "><button class="editar">EDITAR</button></a>
+            <a href="../SemLogin/index.html"><button class="logout">LOGOUT</button></a>
+            <a href="../Cliente/feed.php"><button class="logout">VOLTAR</button></a>
         </div>
     </div>
 </div>

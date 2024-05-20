@@ -2,12 +2,11 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: ../Login/login.php");
     exit();
 }
 
-include 'config.php';
-
+include("../config.php");
 // Obtém informações da empresa
 $id = $_SESSION['id'];
 $stmt = $conexao->prepare("SELECT * FROM empresas WHERE id = ?");
@@ -18,20 +17,20 @@ $row = $result->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os novos dados do formulário
-    $razao_social = $_POST['razao_social'];
-    $nome_fantasia = $_POST['nome_fantasia'];
+    $RazaoSoci = $_POST['RazaoSoci'];
+    $NomeFanta = $_POST['NomeFanta'];
     $email = $_POST['email'];
     $cnpj = $_POST['cnpj'];
     $tel = $_POST['tel'];
 
     // Atualiza os dados da empresa no banco de dados
     $stmt = $conexao->prepare("UPDATE empresas SET RazaoSoci=?, NomeFanta=?, email=?, cnpj=?, tel=? WHERE id=?");
-    $stmt->bind_param("sssssi", $razao_social, $nome_fantasia, $email, $cnpj, $tel, $_SESSION['id']);
+    $stmt->bind_param("sssssi", $RazaoSoci, $NomeFanta, $email, $cnpj, $tel, $_SESSION['id']);
     $stmt->execute();
     $stmt->close();
 
     // Redireciona de volta para o perfil da empresa
-    header("Location: perfil_empresa.php");
+    header("Location: ../Empresa/perfil_empresa.php");
     exit();
 }
 ?>
@@ -42,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="cadastrostyleeditar.css">
-    <link rel="icon" href="trama_logo_small.svg">
-    <script src="./javascript/Header.js" defer></script>
-  <script src="./javascript/menuscript.js" defer></script>
+    <link rel="stylesheet" href="../Cadastro/cadastrostyleeditar.css">
+    <link rel="icon" href="../Imagens/trama_logo_small.svg">
+    <script src="../javascript/Header.js" defer></script>
+    <script src="../javascript/menuscript.js" defer></script>
 </head>
 <body>
 
@@ -62,13 +61,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
     <div class="input-box">
-        <label for="razao_social"><B>RAZÃO SOCIAL:</B></label>
-        <input type="text" name="razao_social" id="razao_social" value="<?php echo $row['RazaoSoci']; ?>"><br>
+        <label for="RazaoSoci"><B>RAZÃO SOCIAL:</B></label>
+        <input type="text" name="RazaoSoci" id="RazaoSoci" value="<?php echo $row['RazaoSoci']; ?>"><br>
     </div>
     
     <div class="input-box">
-        <label for="nome_fantasia"><b>NOME FANTASIA: </b></label>
-        <input type="text" name="nome_fantasia" id="nome_fantasia" value="<?php echo $row['NomeFanta']; ?>"><br>
+        <label for="NomeFanta"><b>NOME FANTASIA: </b></label>
+        <input type="text" name="NomeFanta" id="NomeFanta" value="<?php echo $row['NomeFanta']; ?>"><br>
     </div>
     
     <div class="input-box">
@@ -89,10 +88,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="btn-box">
             <div class="inline-buttons">
                 <input type="submit" value="Atualizar">
-                <button class="excluir"><a href="empresaconfirmarexcluir.php">EXCLUIR</a></button>
+                <button class="excluir"><a href="../Empresa/empresaconfirmarexcluir.php">EXCLUIR</a></button>
             </div>
             <div class="center">
-        <button class="voltar"><a href="perfil_empresa.php">Voltar</a></button>
+        <button class="voltar"><a href="../Empresa/perfil_empresa.php">Voltar</a></button>
     </div>
 </form>
     </div>

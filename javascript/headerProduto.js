@@ -11,19 +11,19 @@ function createHeaderp() {
     </div>
     <ul>
         <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
+        <li><a class="navlink" href="../produtos.html">PRODUTOS</a></li>
         <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
 
-    <a href="visualizar_produtos.php">
+    <a href="../produtos/visualizar_produtos.php">
         <button class="login-btn">SEUS PRODUTOS</button>
     </a>
 
-    <a href="../principais_vendas.php">
+    <a href="../Empresa/principais_vendas.php">
         <button class="dash-btn">DASHBOARD</button>
     </a>
 
-    <a href="../empresa/perfil_empresa.php">
+    <a href="../Empresa/perfil_empresa.php">
         <button class="dash-btn">PERFIL</button>
     </a>
 

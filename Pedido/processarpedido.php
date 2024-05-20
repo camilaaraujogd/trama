@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRAMA - MODA SUSTENTÁVEL</title>
-  <link rel="stylesheet" href="novidadesstyle.css">
-  <link rel="icon" href="imagens/trama_logo_small.svg">
-  <script src="./javascript/Header.js" defer></script>
-  <script src="./javascript/menuscript.js" defer></script>
+  <link rel="stylesheet" href="../SemLogin/novidadesstyle.css">
+  <link rel="icon" href="../Imagens/trama_logo_small.svg">
+  <script src="../javascript/Header.js" defer></script>
+  <script src="../javascript/menuscript.js" defer></script>
 </head>
 <body>
 
 <div class="lancamento">
   <p>ESTAMOS TRABALHANDO AQUI, VOLTE MAIS TARDE</p>
-  <a href="feed.php"><button class="logout">VOLTAR</button></a>
+  <a href="../Cliente/feed.php"><button class="logout">VOLTAR</button></a>
 </div>
 
 <footer class="text-center footer text-center">
@@ -31,7 +31,7 @@
   </div>
 
 </footer>
-<script src="javascript/menuscript.js"></script>
+<script src="../javascript/menuscript.js"></script>
 <div vw class="enabled">
   <div vw-access-button class="active"></div>
   <div vw-plugin-wrapper>

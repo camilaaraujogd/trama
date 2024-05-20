@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="../agendamento/agendamentodetalhestyle.css">
-    <link rel="icon" href="../imagens/trama_logo_small.svg">
+    <link rel="stylesheet" href="../Agendamento/agendamentodetalhestyle.css">
+    <link rel="icon" href="../Imagens/trama_logo_small.svg">
 </head>
 <body>
 <header>
     <div class="logo">
-        <a href="../index.html"><img src="../imagens/trama_logo.png"></a>
+        <a href="../index.html"><img src="../Imagens/trama_logo.png"></a>
     </div>
     <ul>
         <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
         <li><a class="navlink" href="../produtos.html">PRODUTOS</a></li>
         <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
-    <a href="login.html">
-        <button class="login-btn">LOGIN</button>
-    </a>
 </header>
 
 <div class="containerbg">
     <div class="container">
         <?php
         // Inclui o arquivo de configuração do banco de dados
-        include_once('config.php');
+        include_once('../config.php');
 
         // Verifica se foi fornecido um ID na URL
         if(isset($_GET['id'])) {
@@ -59,14 +56,14 @@
                 echo "<div class='detail'><strong>Data:</strong> $data_agendamento</div>";
                 echo "<div class='detail'><strong>Status:</strong> $status</div>";
                 echo "<div class='detail'><strong>Comentário:</strong> $comentario</div>";
-                echo '<button class="voltar-button" onclick="window.location.href = \'perfil_empresa.php\';">Voltar</button>';
+
 
                 echo "</div>";
             } else {
                 // Se nenhum detalhe for encontrado para o ID fornecido, exibe uma mensagem
                 echo "Nenhum detalhe encontrado.";
             }
-
+            echo '<button class="voltar-button" onclick="window.location.href = \'../Empresa/perfil_empresa.php\';">Voltar</button>';
             // Fecha a conexão com o banco de dados
             $conexao->close();
         } else {

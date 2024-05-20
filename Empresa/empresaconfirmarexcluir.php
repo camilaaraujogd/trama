@@ -12,10 +12,10 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="perfilstyle.css">
-    <link rel="icon" href="imagens/trama_logo_small.svg">
-    <script src="./javascript/Header.js" defer></script>
-    <script src="./javascript/menuscript.js" defer></script>
+    <link rel="stylesheet" href="../SemLogin/perfilstyle.css">
+    <link rel="icon" href="../Imagens/trama_logo_small.svg">
+    <script src="../javascript/Header.js" defer></script>
+    <script src="../javascript/menuscript.js" defer></script>
 </head>
 <body>
 
@@ -28,9 +28,9 @@ if (!isset($_SESSION['id'])) {
         </div>
 
         <div class="deletebotao">
-            <form action="empresaexcluir.php" method="post">
+            <form action="../Empresa/empresaexcluir.php" method="post">
                 <input type="submit" name="confirmar" value="CONFIRMAR">
-                <a href="empresa/perfil_empresa.php"><button class="cancelar">CANCELAR</a>
+                <a href="../Empresa/perfil_empresa.php"><button class="cancelar">CANCELAR</a>
             </form>
         </div>
     </div>

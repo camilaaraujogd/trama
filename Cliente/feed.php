@@ -7,20 +7,18 @@ include("../config.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRAMA - MODA SUSTENTÁVEL</title>
-  <link rel="stylesheet" href="novidadesstyle.css">
-  <link rel="icon" href="/imagens/trama_logo_small.svg">
-  <script src="./javascript/headerCliente.js" defer></script>
-  <script src="./javascript/Footer.js" defer></script>
-  <script src="./javascript/menuscript.js" defer></script>
+  <link rel="stylesheet" href="../SemLogin/novidadesstyle.css">
+  <link rel="icon" href="../Imagens/trama_logo_small.svg">
+  <script src="../javascript/headerCliente.js" defer></script>
+  <script src="../javascript/Footer.js" defer></script>
+  <script src="../javascript/menuscript.js" defer></script>
 </head>
 <body>
 
 <div class="lancamento">
   <p>PRODUTOS</p>
   <div class="destaques">
-
-  <?php include_once("../produtos/produtoslogado.php"); ?>
-    
+    <?php include_once("../produtos/produtoslogado.php"); ?>
   </div>
 </div>
 

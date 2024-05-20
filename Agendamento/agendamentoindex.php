@@ -1,5 +1,5 @@
 <?php
-include_once('config.php');
+include ('../config.php');
 
 // Inicializa a variável de mensagem
 $message = "";
@@ -60,13 +60,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <header>
     <div class="logo">
-        <a href="index.html"><img src="trama_logo.png"></a>
+        <a href="index.html"><img src="../Imagens/trama_logo_small.svg"></a>
     </div>
 
     <ul>
-        <li><a class="navlink" href="sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="sustentabilidade.html">SUSTENTABILIDADE</a></li>
+        <li><a class="navlink" href="../SemLogin/sobre.html">SOBRE</a></li>
+        <li><a class="navlink" href="../produto/produtos.html">PRODUTOS</a></li>
+        <li><a class="navlink" href="../SemLogin/sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
 
     <a href="login.html">
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="btn-box">
                 <input type="submit" value="Agendar" class="salvar">
-                <button class="voltar"><a href="perfil_empresa.php">Voltar</a></button>
+                <button class="voltar"><a href="../Empresa/perfil_empresa.php">Voltar</a></button>
             </div>
         </form>
     </div>

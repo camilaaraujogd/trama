@@ -1,5 +1,5 @@
 <?php
-include_once('config.php');
+include_once('../config.php');
 
 session_start();
 
@@ -31,15 +31,15 @@ if(isset($_SESSION["carrinho"]) && count($_SESSION["carrinho"]) > 0) {
             echo "<input type='submit' name='remover' value='Remover do Carrinho'>";
             echo "</form>";
             echo "</div>";
-            echo " <a href='feed.php'>Voltar ao Feed</a>";
+            echo " <a href='../Cliente/feed.php'>Voltar ao Feed</a>";
         }
     } else {
         echo "Nenhum produto encontrado no carrinho.";
     }
 } else {
-    echo "Seu carrinho está vazio. <a href='feed.php'>Voltar ao Feed</a>";
+    echo "Seu carrinho está vazio. <a href='../Cliente/feed.php'>Voltar ao Feed</a>";
 }
 
-echo "<a href='pedido.php'><button>Finalizar Compra</button></a>";
+echo "<a href='../Pedido/pedido.php'><button>Finalizar Compra</button></a>";
 $conexao->close();
 ?>
