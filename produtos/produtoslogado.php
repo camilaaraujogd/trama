@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo '<div class="destaques">';
         echo '<div class="produtinho">';
-        echo '<img src="uploads/' . $row['imagem'] . '" alt="">';
+        echo '<img src="../uploads/' . $row['imagem'] . '" alt="">';
         echo '<h2>' . $row['nome'] . '</h2>';
         echo '<p>' . $row['marca'] . '</p>';
         echo '<p>' . $row['descricao'] . '</p>';
