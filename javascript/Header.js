@@ -15,7 +15,7 @@ function createHeader() {
         <li><a class="navlink" href="../SemLogin/sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
 
-    <a href="/trama/Login/login.html">
+    <a href="../Login/login.html">
         <button class="login-btn">LOGIN</button>
     </a>
   `;
