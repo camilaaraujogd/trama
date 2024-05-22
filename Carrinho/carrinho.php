@@ -42,7 +42,7 @@
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo "<div class='item-carrinho'>";
-                        echo "<img src='uploads/" . $row["imagem"] . "' alt=''>";
+                        echo "<img src='../uploads/" . $row["imagem"] . "' alt=''>";
                         echo "<h2>" . $row["nome"] . "</h2>";
                         echo "<p>" . $row["marca"] . "</p>";
                         echo "<h3>R$ " . $row["preco"] . "</h3>";

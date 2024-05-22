@@ -18,7 +18,7 @@ if(isset($_POST["produto_id"]) && !empty($_POST["produto_id"])) {
 
     if(isset($_FILES["imagem"]) && $_FILES["imagem"]["error"] == 0) {
         $nome_arquivo = $_FILES["imagem"]["name"];
-        $caminho_arquivo = "uploads/" . $nome_arquivo;
+        $caminho_arquivo = "../uploads/" . $nome_arquivo;
 
         // Move a imagem para o diretório de uploads
         move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminho_arquivo);
