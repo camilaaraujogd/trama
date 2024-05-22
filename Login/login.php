@@ -38,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Se for empresa
     elseif ($tipo == "empresa") {
         // Recebe os dados do formulário
-        $cnpj = clean_input($_POST['cnpj']);
-        $senha = clean_input($_POST['senha']);
+        $cnpj = ($_POST['cnpj']);
+        $senha = ($_POST['senha']);
 
         // Verifica se os dados foram recebidos corretamente
         if (!empty($cnpj) && !empty($senha)) {
