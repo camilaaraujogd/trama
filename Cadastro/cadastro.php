@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome       = $_POST['nome'];
         $sobrenome  = $_POST['sobrenome'];
         $email      = $_POST['email'];    
-        $cpf        = $_POST['cpf'];
+        $cpf        = $_POST['cpf'];        
         $tel        = $_POST['tel'];
         $senha      = $_POST['senha']; // Senha sem criptografia
         
@@ -32,12 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Se for empresa
     else if ($tipo == "empresa") {
         // Recebe os dados do formulário
-        $cnpj = $_POST['cnpj'];
+        $cnpj      = $_POST['cnpj'];
         $RazaoSoci = $_POST['RazaoSoci'];
         $NomeFanta = $_POST['NomeFanta'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha']; // Senha sem criptografia
-        $tel = $_POST['tel'];
+        $email     = $_POST['email'];
+        $senha     = $_POST['senha']; // Senha sem criptografia
+        $tel       = $_POST['tel'];
         
         // Criptografa a senha
         $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
