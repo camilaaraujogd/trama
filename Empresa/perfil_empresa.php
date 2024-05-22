@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['id'])) {
+    header("Location: ../Login/login.html");
+    exit();
+}
+
 // Conexão com o banco de dados
 include ('../config.php');
 

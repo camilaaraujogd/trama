@@ -106,12 +106,13 @@ li {
 .dash-btn {
 	float: right;
     background-color: #759358;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: 'Segoe UI', sans-serif; 
     border: none;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
+    letter-spacing: 2px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 20px;

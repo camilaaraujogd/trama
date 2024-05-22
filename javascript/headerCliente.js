@@ -104,8 +104,11 @@ li {
     background-color: #759358;
     border: none;
     color: #fff;
+    font-family: 'Segoe UI', sans-serif; 
     padding: 10px 20px;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
