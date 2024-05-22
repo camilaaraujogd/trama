@@ -2,7 +2,7 @@ function createHeader() {
   const headerHTML = `
     <header>
     <div class="logo">
-        <a href="index.html"><img src="/trama/Imagens/trama_logo.png"></a>
+        <a href="../SemLogin/index.html"><img src="../Imagens/trama_logo.png"></a>
     </div>
     <div class="hamburger-menu">
         <div class="bar"></div>

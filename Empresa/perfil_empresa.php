@@ -34,7 +34,6 @@ $saudacao = "Bem-vindo, " . $row['NomeFanta'];
   <link rel="stylesheet" href="..\Agendamento\agendamentoadminstyle.css">
   <link rel="icon" href=".\imagens\trama_logo_small.svg">
   <script src="..\javascript\headerProduto.js" defer></script>
-  <script src="..\javascript\Footer.js" defer></script>
   <script src="..\javascript\menuscript.js" defer></script>
 </head>
 <body>

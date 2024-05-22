@@ -38,14 +38,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Se for empresa
     elseif ($tipo == "empresa") {
         // Recebe os dados do formulário
-        $cnpj = $_POST['cnpj'];
-        $senha = $_POST['senha'];
+        $cnpj = clean_input($_POST['cnpj']);
+        $senha = clean_input($_POST['senha']);
 
         // Verifica se os dados foram recebidos corretamente
         if (!empty($cnpj) && !empty($senha)) {
-            // Verifica as credenciais da empresa
-            $sql = "SELECT id, senha FROM empresas WHERE cnpj = '$cnpj' AND senha = '$senha'";
-            $result = $conexao->query($sql);
+            // Verifica as credenciais da empresa usando prepared statements
+            $stmt = $conexao->prepare("SELECT id, senha FROM empresas WHERE cnpj = ? AND senha = ?");
+            $stmt->bind_param("ss", $cnpj, $senha);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
             if ($result->num_rows == 1) {
                 $row = $result->fetch_assoc();
@@ -53,10 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
                 $_SESSION['id'] = $row['id'];
                 header("Location: ../produtos/colocarprodutos.html");
-                exit(); // Importante para evitar a execução adicional do código
+                exit();
             } else {
                 echo "CNPJ ou senha incorretos.";
             }
+            $stmt->close();
         } else {
             echo "Por favor, preencha todos os campos.";
         }

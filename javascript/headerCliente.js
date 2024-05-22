@@ -2,7 +2,7 @@ function createHeaderC() {
     const headerCHTML = `
     <header>
     <div class="logo">
-      <a href="../index.html"><img src="../Imagens/trama_logo.png"></a>
+      <a href="../SemLogin/index.html"><img src="../Imagens/trama_logo.png"></a>
     </div>
     <div class="hamburger-menu">
         <div class="bar"></div>
@@ -11,7 +11,7 @@ function createHeaderC() {
     </div>
     <ul>
     <li><a class="navlink" href="../SemLogin/sobre.html">SOBRE</a></li>
-    <li><a class="navlink" href="../SemLogin/produtos/produtos.html">PRODUTOS</a></li>
+    <li><a class="navlink" href="../SemLogin/marcas.html">NOSSAS MARCAS</a></li>
     <li><a class="navlink" href="../SemLogin/sustentabilidade.html">SUSTENTABILIDADE</a></li>
   </ul>
 
