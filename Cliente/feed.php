@@ -16,10 +16,10 @@ include("../config.php");
 <body>
 
 <div class="lancamento">
-  <p>PRODUTOS</p>
-  <div class="destaques">
-    <?php include_once("../produtos/produtoslogado.php"); ?>
-  </div>
+  <p>PRODUTOS</p><br><br> 
+    <div class="destaques">
+      <?php include_once("../produtos/produtoslogado.php"); ?>
+    </div>
 </div>
 
 <div vw class="enabled">

@@ -98,6 +98,7 @@ li {
     justify-content: center; /* Centraliza os elementos filhos horizontalmente */
     width: 90%; /* Define uma largura para a div */
     max-width: 1200px; /* Define uma largura máxima para evitar que a div se expanda demais */
+    padding: 10px;
 }
 
 .lancamento p {
@@ -110,6 +111,7 @@ li {
     max-width: 1200px; /* Defina uma largura máxima para evitar que a seção se expanda demais */
     height: auto;
     margin: 0 auto; /* Centralize horizontalmente */
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap; /* Permita que os produtos quebrem para a próxima linha quando a largura da tela for pequena */
     justify-content: space-around; /* Distribua os produtos igualmente ao redor do contêiner pai */

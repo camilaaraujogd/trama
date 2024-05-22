@@ -14,6 +14,23 @@
         <h1>MEU CARRINHO</h1><br>
 
         <?php
+            session_start();
+            if (!isset($conexao)) {
+                // Definir as variáveis de conexão com o banco de dados
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "trama";
+    
+                // Criar a conexão
+                $conexao = new mysqli($servername, $username, $password, $dbname);
+    
+                // Verificar a conexão
+                if ($conexao->connect_error) {
+                    die("Conexão falhou: " . $conexao->connect_error);
+                }
+            }
+
             // Verifica se há produtos no carrinho
             if (isset($_SESSION["carrinho"]) && count($_SESSION["carrinho"]) > 0) {
                 $carrinho_ids = implode(",", array_keys($_SESSION["carrinho"])); // Usamos array_keys para obter apenas os IDs dos produtos
@@ -53,7 +70,7 @@
             <a href='../Pedido/pedido.php'><button class="botao">Finalizar Compra</button></a>
 
             <?php
-            $conexao->close();
+             $conexao->close();
             ?>
 
     </div>
