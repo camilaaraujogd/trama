@@ -1,6 +1,7 @@
 <?php
 // Incluir arquivo de configuração
-include("config.php");
+include ('../config.php');
+
 session_start();
 
 // Query para selecionar as vendas e ordená-las pela quantidade vendida em ordem decrescente
