@@ -48,7 +48,7 @@
                         echo "<h3>R$ " . $row["preco"] . "</h3>";
                         echo "<form action='editarcarrinho.php' method='post'>";
                         echo "<input type='hidden' name='produto_id' value='" . $row["id"] . "'>";
-                        echo "<input type='number' name='quantidade' value='" . $_SESSION["carrinho"][$row["id"]] . "' min='1'>";
+                        echo "<input type='number' name='quantidade' value='" . $_SESSION["carrinho"][$row["id"]] . "' min='1'><br><br>";
                         echo "<input type='submit' name='atualizar' value='Atualizar Quantidade'>";
                         echo "</form>";
                         // Formulário para exclusão
