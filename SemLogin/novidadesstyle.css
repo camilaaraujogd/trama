@@ -156,6 +156,42 @@ li {
     margin-bottom: 25px;
 }
 
+.marcasDestaques {
+    width: 70%;
+    max-width: 1000px; /* Defina uma largura máxima para evitar que a seção se expanda demais */
+    height: auto;
+    margin: 0 auto; /* Centralize horizontalmente */
+    display: flex;
+    flex-wrap: wrap; /* Permita que os produtos quebrem para a próxima linha quando a largura da tela for pequena */
+    justify-content: space-around; /* Distribua os produtos igualmente ao redor do contêiner pai */
+}
+
+.marcas {
+    width: 40%; /* Ajuste a largura para caber na largura da tela */
+    height: auto;
+    margin: 2%;
+    background-color: #eaefea;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.marcas img{
+    width: 60%;
+    height: auto;
+    display: flex;
+    margin: 0 auto; 
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.marcas h2{
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+}
+
+
 .footer{
     color:#2c2c2c;
  /*   background-image:
