@@ -41,8 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="cadastrostyle.css">
-    <link rel="icon" href="trama_logo_small.svg">
+    <link rel="stylesheet" href="../Cadastro/cadastrostyle.css">
+    <link rel="icon" href="../Imagens/trama_logo_small.svg">
+    <script src="../javascript/Header.js" defer></script>
+    <script src="../javascript/Footer.js" defer></script>
     <script>
         // Função para exibir o alerta com o botão para ver detalhes
         function showAlert(message, detailsLink) {
@@ -60,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <header>
     <div class="logo">
-        <a href="index.html"><img src="../Imagens/trama_logo_small.svg"></a>
+        <a href="index.html"><img src="../Imagens/trama_logo.png"></a>
     </div>
 
     <ul>

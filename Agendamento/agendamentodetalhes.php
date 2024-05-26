@@ -15,9 +15,9 @@
         <a href="../index.html"><img src="../Imagens/trama_logo.png"></a>
     </div>
     <ul>
-        <li><a class="navlink" href="../sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="../produtos.html">PRODUTOS</a></li>
-        <li><a class="navlink" href="../sustentabilidade.html">SUSTENTABILIDADE</a></li>
+        <li><a class="navlink" href="../SemLogin/sobre.html">SOBRE</a></li>
+        <li><a class="navlink" href="../produtos/visualizar_produtos.php">PRODUTOS</a></li>
+        <li><a class="navlink" href="../SemLogin/sustentabilidade.html">SUSTENTABILIDADE</a></li>
     </ul>
 </header>
 
