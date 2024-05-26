@@ -56,9 +56,9 @@ $saudacao = "Bem-vindo, " . $row['NomeFantasia'];
         </div>
         <!-- Botões de logout -->
         <div class="inline-buttons">
-            <a href="../Empresa/empresaeditar.php"><button class="editar">EDITAR</button></a>
-            <a href="../Agendamento/agendamentoindex.php"><button class="editar">AGENDAR VISITA</button></a>
-            <a href="../Agendamento/agendamentodetalhes.php?id=''"><button class="editar">DETALHES DO AGENDAMENTO</button></a>
+            <a href="../Empresa/empresaeditar.php"><button class="logout">EDITAR</button></a>
+            <a href="../Agendamento/agendamentoindex.php"><button class="logout">AGENDAR VISITA</button></a>
+            <a href="../Agendamento/agendamentodetalhes.php?id=''"><button class="logout">DETALHES DO AGENDAMENTO</button></a>
             <a href="../SemLogin/index.html"><button class="logout">LOGOUT</button></a>
         </div>
     </div>

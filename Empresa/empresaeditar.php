@@ -17,15 +17,15 @@ $row = $result->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os novos dados do formulário
-    $RazaoSoci = $_POST['RazaoSoci'];
-    $NomeFanta = $_POST['NomeFanta'];
+    $RazaoSoci = $_POST['RazaoSocial'];
+    $NomeFanta = $_POST['NomeFantasia'];
     $email = $_POST['email'];
     $cnpj = $_POST['cnpj'];
     $tel = $_POST['tel'];
 
     // Atualiza os dados da empresa no banco de dados
     $stmt = $conexao->prepare("UPDATE empresas SET RazaoSoci=?, NomeFanta=?, email=?, cnpj=?, tel=? WHERE id=?");
-    $stmt->bind_param("sssssi", $RazaoSoci, $NomeFanta, $email, $cnpj, $tel, $_SESSION['id']);
+    $stmt->bind_param("sssssi", $RazaoSocial, $NomeFantasia, $email, $cnpj, $tel, $_SESSION['id']);
     $stmt->execute();
     $stmt->close();
 
