@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="../Agendamento/agendamentodetalhestyle.css">
-    <link rel="icon" href="../Imagens/trama_logo_small.svg">
+    <link rel="stylesheet" href="..\Agendamento\agendamentodetalhestyle.css">
+    <link rel="icon" href=".\Imagens\trama_logo_small.svg">
+    <script src="../javascript/Header.js" defer></script>
+    <script src="../javascript/Footer.js" defer></script>
 </head>
 <body>
 <header>
