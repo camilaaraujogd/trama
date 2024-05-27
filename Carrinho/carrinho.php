@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Carrinho</title>
     <link rel="stylesheet" href="carrinhostyle.css">
+    <link rel="icon" href="../Imagens/trama_logo_small.svg">
     <script src="../javascript/headerCliente.js" defer></script>
 </head>
 <body>
