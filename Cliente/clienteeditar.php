@@ -91,8 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         
         <div class="input-box">
-            <label >TELEFONE:</label>
-            <input type="text" id="tel" name="tel" required maxlength="15" pattern="[0-9]{2}\ [0-9]{4,5}-[0-9]{4}" title="Informe um telefone válido (somente números).">
+            <label for="tel"><b>TELEFONE:</b></label>
+            <input type="text" id="tel" name="tel" required maxlength="15" pattern="[0-9]{2}\ [0-9]{4,5}-[0-9]{4}" value="<?php echo $row['tel']; ?>"><br>
         </div>
 
         <div class="input-box">

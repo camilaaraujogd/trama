@@ -38,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verifica se o CPF já está cadastrado
         if (verificaCPF($cpf)) {
-            echo "CPF já cadastrado. <a href=\"cadastro.html\">Voltar para o cadastro</a>";
+            echo "<script>alert('CPF já cadastrado.');</script>";
         } else {
             // Insere os dados no banco de dados
             $sql = "INSERT INTO clientes (nome, sobrenome, email, tel, cpf, senha) VALUES ('$nome', '$sobrenome', '$email', '$tel', '$cpf', '$senhaCriptografada')";
             if ($conexao->query($sql) === TRUE) {
-                header("Location: ../Login/login.html");
+                echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href = '../Login/login.html';</script>";
             } else {
                 echo "Erro: " . $conexao->error;
             }
@@ -62,12 +62,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verifica se o CNPJ já está cadastrado
         if (verificaCNPJ($cnpj)) {
-            echo "CNPJ já cadastrado. <a href=\"cadastro.html\">Voltar para o cadastro</a>";
+            echo "<script>alert('CNPJ já cadastrado.');window.location.href = '../Cadastro/cadastro.html';</script>";
         } else {
             // Insere os dados no banco de dados
             $sql = "INSERT INTO empresas (cnpj, RazaoSoci, NomeFanta, tel, email, senha) VALUES ('$cnpj', '$RazaoSoci', '$NomeFanta', '$tel', '$email', '$senhaCriptografada')";
             if ($conexao->query($sql) === TRUE) {
-                header("Location: ../Login/login.html");
+                echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href = '../Login/login.html';</script>";
             } else {
                 echo "Erro: " . $conexao->error;
             }
