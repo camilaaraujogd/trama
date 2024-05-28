@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['id'])) {
-    header("Location: ../Login/login.php");
+// Verifica se o usuário está logado
+if (!isset($_SESSION['id']))
+    if($_SESSIO['id']=='empresa'){
+        header("Location: ../Login/login.html");
     exit();
+}else{header("location: ../Login/login.html");
 }
 
 include("../config.php");
@@ -17,15 +20,15 @@ $row = $result->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os novos dados do formulário
-    $RazaoSoci = $_POST['RazaoSocial'];
-    $NomeFanta = $_POST['NomeFantasia'];
+    $RazaoSoci = $_POST['RazaoSoci'];
+    $NomeFanta = $_POST['NomeFanta'];
     $email = $_POST['email'];
     $cnpj = $_POST['cnpj'];
     $tel = $_POST['tel'];
 
     // Atualiza os dados da empresa no banco de dados
     $stmt = $conexao->prepare("UPDATE empresas SET RazaoSoci=?, NomeFanta=?, email=?, cnpj=?, tel=? WHERE id=?");
-    $stmt->bind_param("sssssi", $RazaoSocial, $NomeFantasia, $email, $cnpj, $tel, $_SESSION['id']);
+    $stmt->bind_param("sssssi", $RazaoSoci, $NomeFanta, $email, $cnpj, $tel, $_SESSION['id']);
     $stmt->execute();
     $stmt->close();
 

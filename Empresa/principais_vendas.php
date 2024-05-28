@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="PT-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAMA - MODA SUSTENTÁVEL</title>
-    <link rel="stylesheet" href="..\Agendamento\agendamentodetalhestyle.css">
-    <link rel="icon" href="..\imagens\trama_logo_small.svg">
-    <script src="..\javascript\headerProduto.js" defer></script>
-    <script src="../javascript/Footer.js" defer></script>
-</head>
-<body>
-<header>
-    <div class="logo">
-        <a href="../index.html"><img src="../Imagens/trama_logo.png"></a>
-    </div>
-    <ul>
-        <li><a class="navlink" href="../SemLogin/sobre.html">SOBRE</a></li>
-        <li><a class="navlink" href="../produtos/visualizar_produtos.php">PRODUTOS</a></li>
-        <li><a class="navlink" href="../SemLogin/sustentabilidade.html">SUSTENTABILIDADE</a></li>
-    </ul>
-</header>
 
 <div class="containerbg">
     <div class="container">
         <?php
+        session_start();
+        
+        // Verifica se o usuário está logado
+        if (!isset($_SESSION['id']))
+            if($_SESSIO['id']=='empresa'){
+                header("Location: ../Login/login.html");
+            exit();
+        }else{header("location: ../Login/login.html");
+        }
+        
         // Incluir arquivo de configuração
         include ('../config.php');
-
-        session_start();
 
         // Query para selecionar as vendas e ordená-las pela quantidade vendida em ordem decrescente
         $sql = "SELECT nome, data, MONTH(data) AS mes, SUM(quantidade) AS total_vendas 
@@ -68,7 +54,20 @@
 
         // Fechar conexão com o banco de dados
         mysqli_close($conexao);
-        ?>
+?>
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAMA - MODA SUSTENTÁVEL</title>
+    <link rel="stylesheet" href="..\Agendamento\agendamentodetalhestyle.css">
+    <link rel="icon" href="..\imagens\trama_logo_small.svg">
+    <script src="..\javascript\headerProduto.js" defer></script>
+  <script src="..\javascript\menuscript.js" defer></script>
+</head>
+<body>
+
 
 </body>
 </html>

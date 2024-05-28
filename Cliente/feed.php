@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['id']))
+    if($_SESSIO['id']=='cliente'){
+        header("Location: ../Login/login.html");
+    exit();
+}else{header("location: ../Login/login.html");
+}
+
 include("../config.php");
 ?>
 <!DOCTYPE html>

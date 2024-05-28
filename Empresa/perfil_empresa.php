@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['id'])) {
-    header("Location: ../Login/login.html");
+// Verifica se o usuário está logado
+if (!isset($_SESSION['id']))
+    if($_SESSIO['id']=='empresa'){
+        header("Location: ../Login/login.html");
     exit();
+}else{header("location: ../Login/login.html");
 }
 
 // Conexão com o banco de dados
@@ -20,8 +23,6 @@ $row = $result->fetch_assoc();
 $cnpj_formatado = preg_replace('/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/', '$1.$2.$3/$4-$5', $row['cnpj']);
 $telefone_formatado = preg_replace('/(\d{2})(\d{4,5})(\d{4})/', '($1) $2-$3', $row['tel']);
 
-// Saudação personalizada
-$saudacao = "Bem-vindo, " . $row['NomeFantasia'];
 
 ?>
 
@@ -44,10 +45,10 @@ $saudacao = "Bem-vindo, " . $row['NomeFantasia'];
             <h5>SEU PERFIL</h5>
         </div>
         <div class="information">
-            <h1><p>Bem-vindo, <?php echo $row['RazaoSocial']; ?>!</p> </h1>    
+            <h1><p>Bem-vindo, <?php echo $row['RazaoSoci']; ?>!</p> </h1>    
             <h3><b>INFORMAÇÕES DA EMPRESA</b></h3>
-            <p><b>RAZÃO SOCIAL:</b> <?php echo $row['RazaoSocial']; ?></p>
-            <p><b>NOME FANTASIA:</b> <?php echo $row['NomeFantasia']; ?></p>
+            <p><b>RAZÃO SOCIAL:</b> <?php echo $row['RazaoSoci']; ?></p>
+            <p><b>NOME FANTASIA:</b> <?php echo $row['NomeFanta']; ?></p>
             <p><b>CNPJ:</b> <?php echo $cnpj_formatado; ?></p>
             <h3><b>INFORMAÇÕES DE CONTATO</b></h3>
             <p><b>E-MAIL:</b> <?php echo $row['email']; ?></p>
