@@ -29,7 +29,7 @@ $telefone_formatado = preg_replace('/(\d{2})(\d{4,5})(\d{4})/', '($1) $2-$3', $r
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
     <link rel="stylesheet" href="../SemLogin/perfilstyle.css">
-    <link rel="icon" href="trama_logo_small.svg">
+    <link rel="icon" href="../trama_logo_small.svg">
     <script src="../javascript/headerCliente.js" defer></script>
     <script src="../javascript/menuscript.js" defer></script>
 </head>

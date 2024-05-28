@@ -31,7 +31,7 @@ $saudacao = "Bem-vindo, " . $row['NomeFantasia'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
-  <link rel="stylesheet" href="..\Agendamento\agendamentoadminstyle.css">
+  <link rel="stylesheet" href="../SemLogin/perfilstyle.css">
   <link rel="icon" href="..\imagens\trama_logo_small.svg">
   <script src="..\javascript\headerProduto.js" defer></script>
   <script src="..\javascript\menuscript.js" defer></script>
