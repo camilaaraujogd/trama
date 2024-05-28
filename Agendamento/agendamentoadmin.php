@@ -1,6 +1,14 @@
 <?php
-// Inclui o arquivo de configuração do banco de dados
-include_once('../config.php');
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['id']))
+    if($_SESSIO['id']=='admin'){
+        header("Location: ../Login/login.html");
+    exit();
+}else{header("location: ../Login/login.html");
+}
+include("../config.php");
 
 // Inicializa a variável de mensagem
 $message = "";
