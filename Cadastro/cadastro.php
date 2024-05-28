@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verifica se o CPF já está cadastrado
         if (verificaCPF($cpf)) {
-            echo "<script>alert('CPF já cadastrado.');</script>";
+            echo "<script>alert('CPF já cadastrado.');window.location.href = '../Cadastro/cadastro.html';</script>";
         } else {
             // Insere os dados no banco de dados
             $sql = "INSERT INTO clientes (nome, sobrenome, email, tel, cpf, senha) VALUES ('$nome', '$sobrenome', '$email', '$tel', '$cpf', '$senhaCriptografada')";
