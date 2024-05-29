@@ -154,5 +154,22 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault(); // Impede o envio do formulário
         }
     });
+
+    function validarSenhaForte(senha) {
+        // A senha deve conter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial
+        let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
+        return regex.test(senha);
+    }
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+        let senha = document.getElementById('senha').value;
+
+        if (!validarSenhaForte(senha)) {
+            document.getElementById('senha-error').innerText = "Senha fraca! A senha deve conter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.";
+            event.preventDefault(); 
+        } else {
+            document.getElementById('senha-error').innerText = "";
+        }
+    });
 });
 
