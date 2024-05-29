@@ -11,10 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conexao->query($sql);
 
     if ($result->num_rows == 1) {
-        // Se o administrador existir, redirecione para a página de agendamento
-        $row = $result->fetch_assoc();
-        $admin_id = $row['id'];
-        header("Location: ../Agendamento/agendamentoadmin.php?id=$admin_id");
+        // Se o administrador existir, inicia a sessão e define a variável $_SESSION['id']
+        session_start();
+        $_SESSION['id'] = 'admin';
+
+        // Redireciona para a página de agendamento
+        header("Location: ../Agendamento/agendamentoadmin.php");
         exit();
     } else {
         // Se as credenciais estiverem incorretas, redirecione de volta para a página de login
