@@ -54,7 +54,7 @@
                     echo "</tr>";
                 }
                 echo "</table>";
-                echo '<button class="voltar-button" onclick="window.location.href = \'../Empresa/perfil_empresa.php\';">Voltar</button>';
+                echo '<button class="voltar-button" onclick="window.location.href = \'../produtos/colocarprodutos.html\';">Voltar</button>';
             } else {
                 echo "Nenhuma venda encontrada.";
             }
