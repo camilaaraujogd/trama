@@ -1,5 +1,13 @@
 <?php
-// Inclua o arquivo de configuração do banco de dados
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['id']))
+    if($_SESSIO['id']=='admin'){
+        header("Location: ../Login/login.html");
+    exit();
+}else{header("location: ../Login/login.html");
+}
 include("../config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
