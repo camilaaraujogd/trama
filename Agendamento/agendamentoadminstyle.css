@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'segoe UI', sans-serif;
     height: 100%;
+    background-image: url("/trama/Imagens/background.png");
 }
 
 .containerbg {

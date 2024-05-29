@@ -1,73 +1,24 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAMA - MODA SUSTENTÁVEL</title>
+    <link rel="stylesheet" href="..\Agendamento\agendamentoadminstyle.css">
+    <link rel="icon" href="../imagens/trama_logo_small.svg">
+    <script src="../javascript/headerCliente.js" defer></script>
+    <script src="../javascript/menuscript.js" defer></script>
+    <script src="..\javascript\Footer.js" defer></script>
+</head>
 <?php
 include_once('../config.php');
 
 session_start();
 ?>
+    <br>
+    <br>
+<body>
 
-<!DOCTYPE html>
-<html lang="PT-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TRAMA - MODA SUSTENTÁVEL</title>
-  <link rel="stylesheet" href="novidadesstyle.css">
-  <link rel="icon" href="imagens/trama_logo_small.svg">
-  <script src="./javascript/Header.js" defer></script>
-  <script src="./javascript/menuscript.js" defer></script>
-</head>
-<body>
-<title>Seu Pedido</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2, h3 {
-        color: #333;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    li {
-        margin-bottom: 10px;
-    }
-    form {
-        margin-top: 20px;
-    }
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
-    input[type="text"], input[type="number"], input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    input[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-    }
-    input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
-</style>
-</head>
-<body>
 <div class="container">
     <h1>Seu Pedido</h1>
 
@@ -136,8 +87,7 @@ if(isset($_SESSION["carrinho"]) && count($_SESSION["carrinho"]) > 0) {
         <label for="cartao">Cartão de Crédito</label><br>
         <input type="radio" id="boleto" name="pagamento" value="boleto">
         <label for="boleto">Boleto Bancário</label><br>
-
-        <a href="produtos/produtoslogado.html"><button class="logout">VOLTAR</button></a>
+        
         <input type="submit" value="Finalizar Compra">
     </form>
 </div>
