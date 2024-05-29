@@ -14,8 +14,9 @@
 
 <div class="containerbg">
     <div class="container">
+        <BR>
         <div class="title">
-            <h5>SEUS PRODUTOS</h5>
+            <p>SEUS PRODUTOS</p><br>
         </div>
             <?php
             include_once('../config.php');
@@ -43,17 +44,20 @@
             if ($resultado->num_rows > 0) {
                         // Exibe os dados de cada produto
                 while($row = $resultado->fetch_assoc()) {
-                    echo "<h1>" . $row['nome'] . "</h1>";
-                    echo "<h2>Marca: " . $row['marca'] . "</h2>";
-                    echo "<h4>Descrição: " . $row['descricao'] . "</h4>";
-                    echo "<p>Preço: R$" . number_format($row['preco'], 2, ',', '.') . "</p>";
+                    echo "<div class=","produtinho",">";
                     echo "<img src='../uploads/" . $row['imagem'] . "' width='200'><br>";
-                    echo "<a href='?delete_id=" . $row['id'] . "'>Excluir</a><br><br>"; 
+                    echo "<h1>" . $row['nome'] . "</h1>";
+                    echo "<h2>" . $row['marca'] . "</h2>";
+                    echo "<h4>" . $row['descricao'] . "</h4>";
+                    echo "<h5>R$" . number_format($row['preco'], 2, ',', '.') . "</h5>";
+                    echo "<a href='?delete_id=" . $row['id'] . "'>EXCLUIR</a><br><br></div>"; 
                 }
             } else {
                 echo "Nenhum produto encontrado.";
             }
-                echo " <a href='../produtos/colocarprodutos.html'>Voltar</a>";
+                echo " <br><br><div class=","voltar-btn",">
+                               <a href='../produtos/colocarprodutos.html'>VOLTAR</a>
+                       </div><br><Br>";
 
             $conexao->close();
             ?>

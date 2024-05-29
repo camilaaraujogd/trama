@@ -138,21 +138,34 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('form').addEventListener('submit', function(event) {
         let cpf = document.getElementById('cpf').value;
         let cnpj = document.getElementById('cnpj').value;
-
+    
         if (cpf.trim() !== '') { // Verifica se o campo CPF está preenchido
             if (!validarCPF(cpf)) { // Valida CPF
-                alert("CPF inválido!");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'CPF inválido!',
+                    text: 'Por favor, insira um CPF válido.'
+                });
                 event.preventDefault(); // Impede o envio do formulário
             }
         } else if (cnpj.trim() !== '') { // Verifica se o campo CNPJ está preenchido
             if (!validarCNPJ(cnpj)) { // Valida CNPJ
-                alert("CNPJ inválido!");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'CNPJ inválido!',
+                    text: 'Por favor, insira um CNPJ válido.'
+                });
                 event.preventDefault(); // Impede o envio do formulário
             }
         } else {
-            alert("Por favor, preencha o CPF ou CNPJ!");
+            Swal.fire({
+                icon: 'warning',
+                title: 'Campos vazios!',
+                text: 'Por favor, preencha o CPF ou CNPJ.'
+            });
             event.preventDefault(); // Impede o envio do formulário
         }
     });
+    
 });
 

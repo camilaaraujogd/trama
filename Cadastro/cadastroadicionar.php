@@ -19,6 +19,7 @@ $conexao->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMA - MODA SUSTENTÁVEL</title>
     <link rel="stylesheet" href="cadastrostyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="icon" href="trama_logo_small.svg">
 </head>
 <body>
@@ -86,6 +87,7 @@ $conexao->close();
 
 
 <div class="video"></div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 <script src="script.js"></script>
 <div vw class="enabled">
     <div vw-access-button class="active"></div>

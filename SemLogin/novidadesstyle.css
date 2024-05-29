@@ -4,93 +4,6 @@ body {
     height: 100%;
 }
 
-header {
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Adicionado espaçamento interno */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: flex-start; /* Alinhar os links à esquerda */
-    flex-grow: 1; /* Os links ocuparão o espaço restante */
-}
-
-li {
-    padding: 15px;
-}
-
-.logo {
-    height: 75px;
-    margin-right: 50px; /* Move a logo para a direita */
-	margin-left: 50px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
-.logo img {
-    height: 100%;
-}
-
-.navlink {
-    color: #2c2c2c;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .25em;
-    position: relative;
-}
-
-.navlink:hover::after {
-    width: 100%;
-    right: 0;
-}
-
-.navlink::after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 2;
-    content: "";
-    display: block;
-    height: 4px;
-    right: 0;
-    position: absolute;
-    background: linear-gradient(to left, #c1d0ab, #eaefea 100%);
-    transition: width .5s ease 0s, right .5s ease 0s;
-    width: 0;
-}
-
-.login-btn {
-	float: right;
-    background-color: #759358;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    margin-right: 80px; /* Adiciona margem à esquerda */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-btn:hover {
-    background-color:  #000;
-    color: #eaefea;
-}
-
 .lancamento {
     margin: 0 auto; /* Centraliza horizontalmente */
     margin-top: 100px;
@@ -121,10 +34,32 @@ li {
     width: 23%; /* Ajuste a largura para caber na largura da tela */
     height: auto;
     margin: 2%;
+    margin-top: 30px;
     background-color: #eaefea;
     display: inline-block;
     border-radius: 50px;
     padding: 10px;
+}
+
+.produtinho a{
+    float: right;
+    background-color: #759358;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.produtinho a:hover{
+    background-color:  #ac0000;
+    color: #eaefea;   
 }
 
 .produtinho img{
@@ -136,17 +71,18 @@ li {
     border-radius: 50px;
 }
 
-.produtinho h2{
+.produtinho h1{
     font-size: 18px;
     line-height: 1;
     margin-left: 5%;
     margin-bottom: -10px;
 }
 
-.produtinho p{
+.produtinho h2{
     font-size: 14px;
-    color:#5f5f5f;
+    line-height: 2;
     margin-left: 5%;
+    margin-bottom: -10px;
 }
 
 .produtinho h3{
@@ -156,8 +92,50 @@ li {
     margin-bottom: 25px;
 }
 
+.produtinho h4{
+    font-size: 14px;
+    font-weight: 10;
+    line-height: 1;
+    margin-left: 5%;
+    margin-bottom: -10px;
+}
+
+.produtinho h5{
+    font-size: 20px;
+    line-height: 1;
+    margin-left: 5%;
+    margin-bottom: 25px;
+}
+
+.produtinho p{
+    font-size: 14px;
+    color:#5f5f5f;
+    margin-left: 5%;
+}
+
+.container{
+  margin-top: 100px;
+  margin-left: 10%;
+}
+
+.title p{
+  font-size: 25px; /* Estilo para o parágrafo dentro de .lancamento */
+  font-weight: 100;
+  margin-bottom: 15px;
+  margin-left: -200px;
+  display: flex;
+  justify-content: center; 
+  }
+
+.video {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .marcasDestaques {
-    width: 70%;
+    width: 100%;
     max-width: 1000px; /* Defina uma largura máxima para evitar que a seção se expanda demais */
     height: auto;
     margin: 0 auto; /* Centralize horizontalmente */
@@ -167,17 +145,16 @@ li {
 }
 
 .marcas {
-    width: 40%; /* Ajuste a largura para caber na largura da tela */
+    width: 30%; /* Ajuste a largura para caber na largura da tela */
     height: auto;
-    margin: 2%;
-    background-color: #eaefea;
+    margin: 10px;
+    background-color: #fff;
     display: inline-block;
     border-radius: 50px;
-    padding: 10px;
 }
 
 .marcas img{
-    width: 60%;
+    width: 40%;
     height: auto;
     display: flex;
     margin: 0 auto; 
@@ -192,39 +169,34 @@ li {
 }
 
 
-.footer{
-    color:#2c2c2c;
- /*   background-image:
-    linear-gradient(to top right, rgba(0, 74, 109, 0.63) 20%, rgba(9, 38, 82, 0.8) 80%),
-    url('');*/
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    text-align: center;
-    background-image: url("../trama/imagens/background2.png");
+.voltar-btn {
+  background-color: #759358;
+  text-decoration: none;
+  width: 100px;
+  margin-left: 38%;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.footerblock {
-    margin: 0 ;
+.voltar-btn a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.nomeempresa h4{
-    font-size: 25px;
-    font-weight: 500;
-    padding-top: 20px;
-    margin-bottom: -20px;
+.voltar-btn:hover {
+  background-color: #000;
+  color: #eaefea;
 }
-
-.nomeempresa p{
-    font-size: 15px;
-    padding-bottom: 20px;
-    padding-top: -10px;
-}
-
-.copyright{
-    font-size: 10px;
-    padding-bottom: 10px;
-}
-
 
 @media screen and (max-width: 768px) {
     ul {
